@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from sqlalchemy import select
 
 from db.db import db_session
-from db.schemas import BondBase, BondUpdate
+from db.schemas import BondBase
 from db.models import BondModel
 
 router = APIRouter()
