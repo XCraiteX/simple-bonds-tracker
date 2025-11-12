@@ -1,7 +1,7 @@
 import { Bond } from "@/types";
 import axios from "axios";
 
-const API_URL = 'http://localhost:3100';
+const API_URL = 'http://localhost:12001';
 
 export namespace api{
     export const get_bonds = async () => {

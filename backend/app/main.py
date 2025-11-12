@@ -13,6 +13,10 @@ app = FastAPI()
 
 app.include_router(router)
 
+@app.get('/')
+async def main():
+    return 'API still working!'
+
 @app.on_event('startup')
 async def startup():
     await create_all()
@@ -28,6 +32,7 @@ app.add_middleware(
 if __name__ == "__main__":
     uvicorn.run(
         "main:app",
-        port=3100,
+        host="0.0.0.0",
+        port=12001,
         reload=True
     )
